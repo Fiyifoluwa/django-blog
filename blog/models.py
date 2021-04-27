@@ -1,3 +1,5 @@
+# pylint: disable=no-member
+
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import AbstractUser, User
@@ -11,7 +13,7 @@ class Post(models.Model):
     return self.title
 
   def get_absolute_url(self):
-    return reverse('post_detail')
+    return reverse('post_detail', args=[str(self.id)])
 
 class Comment(models.Model): # new
   post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
@@ -25,4 +27,4 @@ class Comment(models.Model): # new
     return self.comment
 
   def get_absolute_url(self):
-    return reverse('postDetail')
+    return reverse('post_detail')
