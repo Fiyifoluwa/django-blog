@@ -27,10 +27,9 @@
     <p><a href="{% url 'logout' %}">Log out</a></p>
     {% else %}
     <p>
-      You are not logged in. Click
-      <a href="fiyi-blog.herokuapp.com/accounts/signup"
-        >here to create an account and make a blog post.</a
-      >
+      You are not logged in. Click 
+      <a href="{% url 'signup' %}">here</a> 
+      to create an account and make a blog post.
     </p>
     <a href="{% url 'login' %}">Or Log In</a>
     {% endif %} {% block content %} {% endblock content %}
