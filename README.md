@@ -4,8 +4,14 @@
 
 ## Getting Started
 
-Run:
+First, run:
 
 ```bash
 python install -r requirements.txt
 ```
+
+Then run:
+```bash
+python manage.py runserver
+```
+to see results
