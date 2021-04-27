@@ -6,7 +6,7 @@
 <div>
   {% for comment in post.comments.all %}
 
-  <p><span class="font-weight: bold;">{{comment.author}}</span> : {{comment}}</p>
+  <p><span style="font-weight: bold;">{{comment.author}}</span> : {{comment}}</p>
   {%endfor%}
 </div>
 {% endfor %} {% endblock content %}
