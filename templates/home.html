@@ -3,4 +3,11 @@
   <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
   <p>{{ post.body }}</p>
 </div>
+<div>
+  {% for comment in post.comments.all %}
+
+  <p style="font-weight: bold;">{{comment.author}}</p>
+  <p>{{comment}}</p>
+  {%endfor%}
+</div>
 {% endfor %} {% endblock content %}
